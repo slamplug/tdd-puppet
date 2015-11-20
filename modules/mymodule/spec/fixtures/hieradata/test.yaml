@@ -1,0 +1,5 @@
+---
+classes:
+  - mymodule
+  
+mymodule::wildfly_root: '/opt/apps/wildfly'

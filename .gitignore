@@ -3,4 +3,6 @@
 *.iml
 .vagrant/
 
-modules/mymodule/spec/fixtures/
+
+modules/mymodule/spec/fixtures/manifests
+modules/mymodule/spec/fixtures/modules
