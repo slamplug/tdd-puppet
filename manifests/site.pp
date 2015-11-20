@@ -4,17 +4,14 @@ node default {
 }
 
 class base {
-  package { 'rspec-puppet':
+  $gems = [ 'rspec-puppet', 'puppet-lint', 'rvm', 'bundler', 'rake', 'puppetlabs_spec_helper' ]
+  
+  package { $gems: 
     ensure   => 'installed',
-    provider => 'gem',
+    provider => 'gem'
   }->
-  package { 'puppet-lint':
-    ensure   => 'installed',
-    provider => 'gem',
-  }->
-  package { 'bundler':
-    ensure   => 'installed',
-    provider => 'gem',
+  package { 'git':
+    ensure => 'installed',
   }
 }
 

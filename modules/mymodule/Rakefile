@@ -1,0 +1,9 @@
+require 'rubygems'
+require 'puppetlabs_spec_helper/rake_tasks'
+
+FileUtils.rm_r '/vagrant/modules/mymodule/spec/fixtures/modules/mymodule', :force => true
+FileUtils.mkdir_p '/vagrant/modules/mymodule/spec/fixtures/manifests'
+FileUtils.mkdir_p '/vagrant/modules/mymodule/spec/fixtures/modules/mymodule'
+FileUtils.cp_r '/vagrant/modules/mymodule/manifests', 
+     		'/vagrant/modules/mymodule/spec/fixtures/modules/mymodule'#, :noop => true, :verbose => true
+FileUtils.touch '/vagrant/modules/mymodule/spec/fixtures/manifests/site.pp'
