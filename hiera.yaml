@@ -1,0 +1,10 @@
+---
+:backends:
+  - yaml
+  - json
+:yaml:
+  :datadir: /vagrant/hieradata
+:hierarchy:
+  - "%{::hostname}"
+  - "%{operatingsystem}"
+  - common
