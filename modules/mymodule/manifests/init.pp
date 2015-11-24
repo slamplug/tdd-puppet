@@ -1,4 +1,4 @@
-# === Class: wso2esb
+# === Class: mymodule
 #
 class mymodule() {
 }
